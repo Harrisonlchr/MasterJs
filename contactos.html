@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+	<title>Mi primera web</title>
+</head>
+<body>
+	
+	<!--Encabezado-->
+	<h1>Mi primera web</h1>
+
+	<!--Menu-->
+	<ul>
+		<li><a href="encabezado.html" title="Inicio">Inicio</a></li>
+		<li><a href="contenidos.html">Contenidos</a></li>
+		<li><a href="contactos.html">Contacto</a></li>	
+	</ul>
+
+	<hr>
+	<!--Contenido de contactos.html-->
+	<h2>Contacto</h2>
+	<form>
+		<p>
+			<label for="nombre">Nombre</label> <br/>
+			<input type="text" name="nombre"/>
+
+		</p>
+
+		<p>
+			<label for="biografia">Biografia</label>
+			<textarea name="biografia"></textarea>
+
+		</p>
+		<p>
+			<label for="edad">Edad</label> 
+			<select name="edad">
+				<option value="mayor">Mayor de edad</option>
+				<option value="adulot">Adulto</option>
+				<option value="65">Mayor de 65 años</option>
+
+
+
+			</select>
+
+		</p>
+		<p>
+			<input type="submit" value="Enviar email"/>
+		</p>
+	</form>
+</body>
+</html>
