@@ -5,6 +5,9 @@
 var categorias = ["Accion","Terror","Comedia",];
 var peliculas = ["La vida es Bella","La bella y la bestia","Piratas del caribe"];
 
+peliculas.sort();
+console.log(peliculas);
+
 var cine = [categorias, peliculas];
 
 
