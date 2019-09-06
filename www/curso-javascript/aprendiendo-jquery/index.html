@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Aprendiendo jQuery</title>
+			<!--
+			<script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous">
+			</script>
+			-->
+			<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+			<script type="text/javascript" src="js/01-selectores.js"></script>
+			
+			<style>
+				.zebra{
+					border: 2px dashed blue;
+				}
+				.grande{
+					font-size: 10px;
+				}
+				.margen-superior{
+					display:block;	
+					margin-top:45px;
+				}
+
+			</style>
+
+	</head>
+	<body>
+		<h1>Aprendiendo jQuery con Victor Robles WEB</h1>
+		
+		<ul>
+			<li><a href="https://www.google.es/" title="Google">Ir a Google</a></li>
+			<li><a href="https://wwww.facebook.com" title="Facebook">Ir a Facebook</a></li>
+			<li><a href="https://github.com/Harrisonlchr" title="Github">Ir a GitHub de Harrison</a></li>
+
+		</ul>
+
+		<dir id="caja">
+			<p>Hola soy una caja</p>
+			<ul>
+				<li>Elemento 1</li>
+				<li>Elemento 2</li>
+			</ul>
+		</dir>
+
+		<p id="rojo" class="x">Ejercicios de jQuery</p>
+		<p id="amarillo" class="zebra">Practicando con selectores</p>
+		<p id="verde" class="x">Quiero ser un parrafo</p>
+
+		<p class="zebra">Soy un parrafo blanco</p>
+	</body>
+</html>
