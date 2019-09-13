@@ -6,6 +6,9 @@ $(document).ready(()=>{
 var datos = $("#datos");
 //datos.load("https://reqres.in/");
 
+
+
+
 // GET
   $.get("https://reqres.in/api/users", {page: 2}, function (response) {
     response.data.forEach((element, index) => {
@@ -16,10 +19,8 @@ var datos = $("#datos");
 
 
 
+
 // POST
-
-
-
   var formulario = $("#formulario");
   var usuario ="";
 
@@ -30,16 +31,35 @@ var datos = $("#datos");
       nombre: $('input[name="name"]').val(),
       apellido: $('input[name="apellido"]').val(),
     };
+    /*
     console.log(usuario);
     $.post($(this).attr("action"), usuario  , function (response){
       console.log(response);
     });
-    return false;
+*/
 
+
+
+$.ajax({
+    type: 'POST',
+    dataType: 'json',
+    url: $(this).attr("action"),
+    data: usuario,
+    beforeSend: function(){
+      console.log("Enviendo usuario...");
+    },
+    success: function(response){
+      console.log(response);
+    },
+    error: function(){
+      console.log("A ocurrido un error");
+    },
+    timeout: 10000
 });
 
+return false;
 
-
+});
 
 
 })
