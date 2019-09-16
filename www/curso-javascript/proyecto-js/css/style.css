@@ -121,3 +121,8 @@ footer{
   margin-top: 50px;
   line-height: 47px;
 }
+.subir{
+  text-decoration: none;
+  color: white;
+  float: right;
+}
