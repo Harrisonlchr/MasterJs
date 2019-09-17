@@ -52,7 +52,7 @@ $(document).ready(function () {
       },
 
     ];
-
+    // inserccion de Post
     posts.forEach((elemento, index)=>{
       var post = `
       <article class="post">
@@ -66,6 +66,7 @@ $(document).ready(function () {
     });
 
 
+    // Logica de boton Ir arriba SCROLL!
     $(".subir").click(function(e){
       e.preventDefault();
 
