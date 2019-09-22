@@ -10,6 +10,7 @@ import { ZapatillasComponent} from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 // Array de rutas
 const appRoutes: Routes = [
@@ -19,11 +20,12 @@ const appRoutes: Routes = [
   {path: 'zapatillas', component: ZapatillasComponent},
   {path: 'cursos', component: CursosComponent},
   {path: 'externo', component: ExternoComponent},
+  {path: 'contacto', component: ContactoComponent},
   {path: '**', component: HomeComponent},
 
 ];
 
-// Exportar el modulo del touter
+// Exportar el modulo del Router
 
 export const appRoutingProviders: any[] = [];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
