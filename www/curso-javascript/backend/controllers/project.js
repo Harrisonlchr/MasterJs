@@ -14,6 +14,7 @@ var controller = {
       message: 'Soy el metodo test del controlador'
     });
   },
+
   saveProject: function(req, res){
     var project = new Project();
 
@@ -46,6 +47,35 @@ var controller = {
       return res.status(200).send({projects});
     })
 
+  },
+
+  updateProjects: function (req, res) {
+    var projectId = req.params.id;
+    var update = req.body;
+
+    Project.findByIdAndUpdate(projectId, update, {new:true}, (err, projectUpdated) => {
+      if (err) return res.status(500).send({message: 'Error al actualizar'});
+
+      if (!projectUpdated) return res.status(400).send({message: 'No existe el proyectos'});
+
+      return res.status(200).send({
+        project: projectUpdated
+      });
+
+    });
+  },
+
+  deleteProject: function (req, res){
+    var projectId = req.params.id;
+
+    Project.findByIdAndRemove(projectId, (err, projectRemoved) => {
+      if (err) return res.status(500).send({message: 'No se ha podido borrar el proyecto'});
+      if (!projectRemoved) return res.status(404).send({message: 'No se puede eliminar ese proyecto'});
+      return res.status(200).send({
+
+        project: projectRemoved
+      });
+    });
   }
 
 };
