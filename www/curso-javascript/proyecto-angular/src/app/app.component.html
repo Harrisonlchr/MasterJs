@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es" >
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <header>
+
+      <ul>
+        <li> <a [routerLink]="['/sobre-mi']">Sobre mi</a></li>
+        <li> <a [routerLink]="['/proyectos']">Proyectos</a></li>
+        <li> <a [routerLink]="['/crear-proyecto']">Crear proyecto</a></li>
+        <li> <a [routerLink]="['/contacto']">Contacto</a></li>
+      </ul>
+
+    </header>
+    <section id="content">
+      <router-outlet></router-outlet>
+
+    </section>
+    <footer>
+      Master en Javascript Harrison Chacon &copy;
+    </footer>
+  </body>
+</html>
